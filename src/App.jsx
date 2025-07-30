@@ -1,17 +1,30 @@
-import { useState } from 'react'         // ✅ useState import qilindi
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+import Home from "./components/Home"
+import About from "./components/About"
+import Menu from "./components/Menu"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+import "./styles/global.css"
 
 function App() {
-  const [count, setCount] = useState(0)  // ✅ count holati
-
   return (
-    <>
-      <h1>Salom bu frontend ilova</h1>
-      {/* <p>Sanoq: {count}</p>
-      <button onClick={() => setCount(count + 1)}>
-        +1 qo‘shish
-      </button> */}
-    </>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
