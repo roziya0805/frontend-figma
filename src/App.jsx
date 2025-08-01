@@ -6,6 +6,7 @@ import Menu from "./components/Menu"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import "./styles/global.css"
+import Book from "./components/Book"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/book" element={<Book/>} />
           </Routes>
         </main>
 

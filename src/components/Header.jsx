@@ -72,7 +72,9 @@ const Header = () => {
           </nav>
 
           <div className="header-actions">
-            <button className="btn-primary">Bron qilish</button>
+            <Link to="/book">
+                <button className="btn-primary">Bron qilish</button>
+            </Link>
           </div>
 
           <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
